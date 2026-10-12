@@ -12,3 +12,6 @@ uninstall:
   credentials: ["bili-cli cookies（本机，红线：不入库）"]
   bridges: []
   processes: []
+disclosure: "Accesses bilibili.com via bili-cli (web-cookie login); processes watch history, favorites and video content (privacy: medium); cookies only on this machine; watch data never enters any git repository; low-risk writes need explicit user verbs + CLI --yes."
+menu:
+  bili: bilibili domain — query-and-answer + emergence archives (writes need explicit verbs + --yes)
