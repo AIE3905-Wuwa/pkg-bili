@@ -15,7 +15,7 @@ Write: **whitelist only** (2026-10-06 owner decision) — `watchlater add/remove
 
 ## Prerequisites (install / auth)
 
-1. Install (if missing): `cd connectors/bili-cli && python -m venv .venv && .venv/Scripts/pip install -e .` (deps: requests only; may run from another venv with requests available via `PYTHONPATH=.`)
+1. Install (if missing): `cd connectors/bili-cli` and install editable with the host's Python package manager (deps: requests only; e.g. `python -m venv .venv` + the venv's pip on dev desktops, `uv venv .venv && uv pip install -e .` on PEP 668 hosts — instance-level environment declarations in AGENTS.md take precedence; may also run from another venv with requests available via `PYTHONPATH=.`)
 2. Login: from a logged-in browser DevTools → Network → any api.bilibili.com request → copy the Cookie header value, then `bili-cli login --cookie "SESSDATA=...; bili_jct=...; buvid3=..."`. Stored at `~/.bili-cli/cookies.json` (0600) — credentials never enter any repo, never echoed in full.
 3. Self-check: `bili-cli me` returns mid/uname when the cookie is alive; cookie expiry shows as API code -101 → user re-exports a fresh cookie.
 
